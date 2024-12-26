@@ -1,0 +1,137 @@
+:root {
+    --text-size: 32px; /* 글자 크기 */
+    --text-color: #fff; /* 글자 색상 */
+    --text-outline-color: rgba(0, 0, 0, 0.8); /* 테두리 색상 */
+    --max-width: 100%; /* 채팅 최대 너비 */
+
+    /* 글자 테두리 */
+    --text-shadow: -1px -1px 0px var(--text-outline-color), -1px -0.5px 0px var(--text-outline-color),
+    -1px 0px 0px var(--text-outline-color), -1px 0.5px 0px var(--text-outline-color),
+    -1px 1px 0px var(--text-outline-color), -1px 1.5px 0px var(--text-outline-color),
+    -0.5px -1px 0px var(--text-outline-color), -0.5px -0.5px 0px var(--text-outline-color),
+    -0.5px 0px 0px var(--text-outline-color), -0.5px 0.5px 0px var(--text-outline-color),
+    -0.5px 1px 0px var(--text-outline-color), -0.5px 1.5px 0px var(--text-outline-color),
+    0px -1px 0px var(--text-outline-color), 0px -0.5px 0px var(--text-outline-color),
+    0px 0px 1px var(--text-outline-color), 0px 0.5px 1px var(--text-outline-color),
+    0px 1px 1px var(--text-outline-color), 0px 1.5px 1px var(--text-outline-color),
+    0.5px -1px 0px var(--text-outline-color), 0.5px -0.5px 0px var(--text-outline-color),
+    0.5px 0px 1px var(--text-outline-color), 0.5px 0.5px 1px var(--text-outline-color),
+    0.5px 1px 1px var(--text-outline-color), 0.5px 1.5px 1px var(--text-outline-color),
+    1px -1px 0px var(--text-outline-color), 1px -0.5px 0px var(--text-outline-color),
+    1px 0px 1px var(--text-outline-color), 1px 0.5px 1px var(--text-outline-color),
+    1px 1px 1px var(--text-outline-color), 1px 1.5px 1px var(--text-outline-color),
+    1.5px -1px 0px var(--text-outline-color), 1.5px -0.5px 0px var(--text-outline-color),
+    1.5px 0px 1.5px var(--text-outline-color), 1.5px 0.5px 1.5px var(--text-outline-color),
+    1.5px 1px 1.5px var(--text-outline-color), 1.5px 1.5px 1.5px var(--text-outline-color);
+
+    /* -- 위에 있는 변수들을 변경해서 커스터마이징이 가능합니다 -- */
+    /* -- 이하 내용은 수정하지 않는 것을 권장합니다 -- */
+}
+
+/* Load font */
+@font-face {
+    font-family: 'Chzzk-CSS-Font';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Minguk-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#root > [class*='live_overlay_chatting'] {
+    /* This amount of padding doesn't kill you :D */
+    padding: 3px !important;
+
+    font-family:
+            'Chzzk-CSS-Font',
+            -apple-system,
+            BlinkMacSystemFont,
+            Apple SD Gothic Neo,
+            Helvetica,
+            Arial,
+            NanumGothic,
+            나눔고딕,
+            Malgun Gothic,
+            맑은 고딕,
+            Dotum,
+            굴림,
+            gulim,
+            새굴림,
+            noto sans,
+            돋움,
+            sans-serif !important;
+    font-size: var(--text-size) !important;
+
+    /* Remove top gradient */
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+div[class*='live_overlay_item'] {
+    /* Add chat gap */
+    margin: 0.2em 0 !important;
+}
+
+div[class*='live_overlay_message'] {
+    background: transparent !important;
+    animation: chat-fade 0.2s ease-in forwards !important;
+    max-width: var(--max-width) !important;
+}
+
+div[class*='live_chatting_message_wrapper'] {
+    text-shadow: var(--text-shadow) !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-size: 1em !important;
+    line-height: 1.3em !important;
+    letter-spacing: -0.5px;
+
+    /* Remove default padding */
+    padding: 0 !important;
+}
+
+span[class*='live_chatting_username_container'] {
+    /* Remove nickname */
+    display: none !important;
+}
+
+span[class*='live_chatting_message_text'] {
+    color: var(--text-color) !important;
+}
+
+span[class*='live_chatting_message_text'] > img,
+svg {
+    /* Make it centered */
+    margin: -0.2em 0 0 0 !important;
+    vertical-align: middle !important;
+
+    /* Makes emoji larger */
+    height: 1.6em !important;
+    width: auto !important;
+}
+
+span[class*='live_chatting_username_wrapper'] {
+    vertical-align: middle !important;
+    margin: -0.2em 0 0 0 !important;
+    height: 1em !important;
+
+    /* Remove default gap */
+    gap: 0 !important;
+}
+
+span[class*='live_chatting_username_icon'] {
+    /* Add gap between badges and nickname */
+    margin-right: 0.1em !important;
+}
+
+span[class*='live_chatting_username_nickname']::after {
+    /* Add ':' after nickname */
+    content: ' : ';
+}
+
+span[class*='badge_container'] > img,
+svg {
+    height: 1em !important;
+    width: auto !important;
+}
+
+/* Chzzk chat simple CSS */
+/* Last updated: 2024-12-26 */
+/* Version: 0.0.1 */
