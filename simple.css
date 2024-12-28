@@ -1,29 +1,11 @@
 :root {
-    --text-size: 32px; /* 글자 크기 */
+    --size: 32px; /* 글자 크기 */
     --text-color: #fff; /* 글자 색상 */
     --text-outline-color: rgba(0, 0, 0, 0.8); /* 테두리 색상 */
     --max-width: 100%; /* 채팅 최대 너비 */
 
     /* 글자 테두리 */
-    --text-shadow: -1px -1px 0px var(--text-outline-color), -1px -0.5px 0px var(--text-outline-color),
-    -1px 0px 0px var(--text-outline-color), -1px 0.5px 0px var(--text-outline-color),
-    -1px 1px 0px var(--text-outline-color), -1px 1.5px 0px var(--text-outline-color),
-    -0.5px -1px 0px var(--text-outline-color), -0.5px -0.5px 0px var(--text-outline-color),
-    -0.5px 0px 0px var(--text-outline-color), -0.5px 0.5px 0px var(--text-outline-color),
-    -0.5px 1px 0px var(--text-outline-color), -0.5px 1.5px 0px var(--text-outline-color),
-    0px -1px 0px var(--text-outline-color), 0px -0.5px 0px var(--text-outline-color),
-    0px 0px 1px var(--text-outline-color), 0px 0.5px 1px var(--text-outline-color),
-    0px 1px 1px var(--text-outline-color), 0px 1.5px 1px var(--text-outline-color),
-    0.5px -1px 0px var(--text-outline-color), 0.5px -0.5px 0px var(--text-outline-color),
-    0.5px 0px 1px var(--text-outline-color), 0.5px 0.5px 1px var(--text-outline-color),
-    0.5px 1px 1px var(--text-outline-color), 0.5px 1.5px 1px var(--text-outline-color),
-    1px -1px 0px var(--text-outline-color), 1px -0.5px 0px var(--text-outline-color),
-    1px 0px 1px var(--text-outline-color), 1px 0.5px 1px var(--text-outline-color),
-    1px 1px 1px var(--text-outline-color), 1px 1.5px 1px var(--text-outline-color),
-    1.5px -1px 0px var(--text-outline-color), 1.5px -0.5px 0px var(--text-outline-color),
-    1.5px 0px 1.5px var(--text-outline-color), 1.5px 0.5px 1.5px var(--text-outline-color),
-    1.5px 1px 1.5px var(--text-outline-color), 1.5px 1.5px 1.5px var(--text-outline-color);
-
+    text-shadow: var(--text-outline-color) 2px 0px 0px, var(--text-outline-color) 1.75517px 0.958851px 0px, var(--text-outline-color) 1.0806px 1.68294px 0px, var(--text-outline-color) 0.141474px 1.99499px 0px, var(--text-outline-color) -0.832294px 1.81859px 0px, var(--text-outline-color) -1.60229px 1.19694px 0px, var(--text-outline-color) -1.97998px 0.28224px 0px, var(--text-outline-color) -1.87291px -0.701566px 0px, var(--text-outline-color) -1.30729px -1.5136px 0px, var(--text-outline-color) -0.421592px -1.95506px 0px, var(--text-outline-color) 0.567324px -1.91785px 0px, var(--text-outline-color) 1.41734px -1.41108px 0px, var(--text-outline-color) 1.92034px -0.558831px 0px;
     /* -- 위에 있는 변수들을 변경해서 커스터마이징이 가능합니다 -- */
     /* -- 이하 내용은 수정하지 않는 것을 권장합니다 -- */
 }
@@ -58,7 +40,7 @@
             noto sans,
             돋움,
             sans-serif !important;
-    font-size: var(--text-size) !important;
+    font-size: var(--size) !important;
 
     /* Remove top gradient */
     mask-image: none !important;
@@ -119,11 +101,6 @@ span[class*='live_chatting_username_wrapper'] {
 span[class*='live_chatting_username_icon'] {
     /* Add gap between badges and nickname */
     margin-right: 0.1em !important;
-}
-
-span[class*='live_chatting_username_nickname']::after {
-    /* Add ':' after nickname */
-    content: ' : ';
 }
 
 span[class*='badge_container'] > img,
